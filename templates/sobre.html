@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../static/css/sobre.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Hepta+Slab:400,700|Lato:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b783c53a52.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../static/img/apple.png">
+</head>  
+<body>
+  <nav>
+    <div class="logo header-fixed">
+        <h1>DevFruit<i class="fa-solid fa-watermelon-slice"></i></h1>
+    </div>
+   
+    <ul>
+            
+      <li><a href="{{ url_for('sobre') }}">Sobre</a>&nbsp;<i class="fa-solid fa-carrot"></i></li>
+      <li><a href="{{ url_for('carrinho') }}">Carrinho</a>&nbsp;<i class="fa-solid fa-basket-shopping"></i></li>
+      <span id="cartCounter"></span>
+      <li><a href="{{ url_for('login') }}">Login</a>&nbsp;<i class="fa-solid fa-address-card"></i></li>
+      <li><a href="{{ url_for('atendimento') }}">Atendimento</a>&nbsp;<i class="fa-solid fa-circle-info"></i></li>
+      {% if username %}
+      <li><a href="{{ url_for('logout') }}">Sair</a>&nbsp;<i class="fa-solid fa-circle-xmark"></i></li>
+      {% endif %}
+      
+  </ul>
+  </nav>
+<!--Conteúdo-->
+<section class="contentContainer">
+<div class="carrosel">
+  <div class="slides">
+    <input type="radio" name="slide" id="slide1">
+    <input type="radio" name="slide" id="slide2">
+    <input type="radio" name="slide" id="slide3">
+    <input type="radio" name="slide" id="slide4">
+
+    <div class="slide s1">
+      <img src="../static/img/carrosel1.png" alt="frutas">
+    </div>
+    <div class="slide">
+      <img src="../static/img/carrosel2.png" alt="frutas1">
+    </div>
+    <div class="slide">
+      <img src="../static/img/carrosel3.png" alt="legumes">
+    </div>
+    <div class="slide">
+      <img src="../static/img/carrosel4.png" alt="abacaxi">
+    </div>
+
+    <div class="navigation">
+      <label class="bar" for="slide1"></label>
+      <label class="bar" for="slide2"></label>
+      <label class="bar" for="slide3"></label>
+      <label class="bar"for="slide4"></label>
+      
+</div>
+</section> 
+
+  
+<!--Rodapé-->
+<footer class="footerContainer">
+    <div class="main-content">
+    <div class="left box">
+      <h2> Sobre nós</h2>
+      <div class="content">
+        <p>Seu hortifruti online. Frutas, Legumes, Verduras, Raízes, Cogumelos e Ovos frescos, direto para sua casa.</p>
+      
+        <div class="social">
+          <a href="#"><span class="fab fa-facebook-f"></span></a>
+          <a href="#"><span class="fab fa-twitter"></span></a>
+          <a href="#"><span class="fab fa-instagram"></span></a>
+          <a href="#"><span class="fab fa-youtube"></span></a>
+        </div>
+      </div>
+    </div><!--left box-->
+    <div class="center box">
+      <h2>Endereço</h2>
+      <div class="content">
+        <div class="place">
+          <span class="fas fa-map-marker"></span>
+          <span class="text">Barra Funda, São Paulo</span>
+        </div>
+
+        <div class="phone">
+          <span class="fas fas fa-phone-alt"></span>
+          <span class="text">+55 11 9999-9999</span>
+        </div>
+
+        <div class="email">
+          <span class="fas fa-envelope"></span>
+          <span class="text">DevFrui@hortifruti.com.br</span>
+        </div>
+      </div>
+    </div>
+    <div class="right box">
+      <h2>Receba todas as promoções</h2>
+      <div class="content">
+        <form action="#">
+          <div class="email">
+            <div class="text">Email *</div>
+            <input type="email" required>
+          </div>
+          <div class="msg">
+            <div class="text">Mensagem *</div>
+            <textarea rows="2" cols="25" required></textarea>
+          </div>
+          <div class="btn">
+            <button type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div><!--main-content-->
+  <div class="bottom">
+    <div class="center">
+      <span class="credit">Criado por <a href="#">DevFruit</a></span>
+      <span class="far fa-copyright">2022 Todos os diteitos reservados</span>
+    </div>
+  </div>
+</footer>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+     
+        
+  
+</body>
+</html>

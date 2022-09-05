@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atendimento</title>
+    <link rel="stylesheet" href="../static/css/aten.css" />
+    <link rel="shortcut icon" href="../static/img/apple.png" />
+    <script
+      src="https://kit.fontawesome.com/b783c53a52.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo header-fixed">
+        <h1>DevFruit<i class="fa-solid fa-watermelon-slice"></i></h1>
+      </div>
+      <ul>
+            
+        <li><a href="{{ url_for('sobre') }}">Sobre</a>&nbsp;<i class="fa-solid fa-carrot"></i></li>
+        <li><a href="{{ url_for('carrinho') }}">Carrinho</a>&nbsp;<i class="fa-solid fa-basket-shopping"></i></li>
+        <span id="cartCounter"></span>
+        <li><a href="{{ url_for('login') }}">Login</a>&nbsp;<i class="fa-solid fa-address-card"></i></li>
+        <li><a href="{{ url_for('atendimento') }}">Atendimento</a>&nbsp;<i class="fa-solid fa-circle-info"></i></li>
+        {% if username %}
+        <li><a href="{{ url_for('logout') }}">Sair</a>&nbsp;<i class="fa-solid fa-circle-xmark"></i></li>
+        {% endif %}
+        
+    </ul>
+    </nav>
+    <div class="container">
+      <div class="form-image">
+        <img src="../static/img/login.svg" alt="" />
+      </div>
+      <div class="form">
+        <form action="#">
+          <div class="form-header">
+            <div class="title">
+              <h1>Atendimento</h1>
+            </div>
+          </div>
+          <div class="login-button">
+            <button><a href="index.html">Voltar para o carrinho</a></button>
+          </div>
+
+          <div class="input-group">
+            <div class="input-box">
+              <label for="firstname">Primeiro Nome</label>
+              <input
+                id="firstname"
+                type="text"
+                name="firstname"
+                placeholder="Digite seu primeiro nome"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="email">E-mail</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="password">Nº do pedido</label>
+              <input
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Digite o numero do pedido"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="continue-button">
+            <button><a href="carrinho.html">Enviar</a></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

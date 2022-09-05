@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forma de pagamento</title>
+    <link rel="stylesheet" href="../static/css/fina.css" />
+    <link rel="shortcut icon" href="../static/img/apple.png" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-image">
+        <img src="../static/img/pagar.svg" alt="" />
+      </div>
+      <div class="form">
+        <form action="#">
+          <div class="form-header">
+            <div class="title">
+              <h1>Forma de pagamento</h1>
+            </div>
+            <div class="login-button">
+              <button><a href="endereco.html">Voltar</a></button>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-box">
+              <label for="cartao">Numero do cartão</label>
+              <input
+                id="cartao"
+                type="number"
+                name="cartao"
+                placeholder="Digite o numero do cartão"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="nome">Nome no cartão</label>
+              <input
+                id="nome"
+                type="text"
+                name="nome"
+                placeholder="Digite o nome no cartão"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <label for="validade">Data de validade</label>
+              <input
+                id="validade"
+                type="date"
+                name="validade"
+                placeholder="00/00"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="CVV">CVV</label>
+              <input
+                id="CVV"
+                type="number"
+                name="CVV"
+                placeholder="000"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="card-inputs">
+            <div class="card-title">
+              <h6>Bandeira do cartão</h6>
+            </div>
+
+            <div class="card-group">
+              <div class="card-input">
+                <input id="master" type="radio" name="card" />
+                <label for="master">MasterCard</label>
+              </div>
+
+              <div class="card-input">
+                <input id="visa" type="radio" name="card" />
+                <label for="visa">Visa</label>
+              </div>
+
+              <div class="card-input">
+                <input id="amex" type="radio" name="card" />
+                <label for="amex">Amex</label>
+              </div>
+
+              <div class="card-input">
+                <input id="hiper" type="radio" name="card" />
+                <label for="hiper">HiperCard</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="continue-button">
+            <button><a href="{{ url_for('index') }}">Continuar</a></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

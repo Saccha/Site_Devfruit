@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../static/css/logi.css" />
+    <link rel="shortcut icon" href="../static/img/apple.png" />
+    <script
+      src="https://kit.fontawesome.com/b783c53a52.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logo header-fixed">
+        <a href="{{ url_for('index') }}"><h1>DevFruit<i class="fa-solid fa-watermelon-slice"></i></h1></a>
+      </div>
+
+      <ul>
+            
+        <li><a href="{{ url_for('sobre') }}">Sobre</a>&nbsp;<i class="fa-solid fa-carrot"></i></li>
+        <li><a href="{{ url_for('carrinho') }}">Carrinho</a>&nbsp;<i class="fa-solid fa-basket-shopping"></i></li>
+        <span id="cartCounter"></span>
+        <li><a href="{{ url_for('login') }}">Login</a>&nbsp;<i class="fa-solid fa-address-card"></i></li>
+        <li><a href="{{ url_for('atendimento') }}">Atendimento</a>&nbsp;<i class="fa-solid fa-circle-info"></i></li>
+        {% if username %}
+        <li><a href="{{ url_for('logout') }}">Sair</a>&nbsp;<i class="fa-solid fa-circle-xmark"></i></li>
+        {% endif %}
+        
+    </ul>
+    </nav>
+    <div class="container">
+      <div class="form-image">
+        <img src="../static/img/login.svg" alt="" />
+      </div>
+      <div class="form">
+        <form action="{{ url_for('cadastrar') }}" method="post" autocomplete="off">
+          <div class="form-header">
+            <div class="title">
+              <h1>Cadastre-se</h1>
+            </div>
+          </div>
+          <div class="login-button">
+            <button><a href="{{ url_for('login') }}">Já possuo cadastro</a></button>
+          </div>
+
+          <div class="input-group">
+            <div class="input-box">
+              <label for="namecomplete">Nome completo</label>
+              <input
+                id="nomecompleto"
+                type="text"
+                name="nomecompleto"
+                placeholder="Digite seu nome completo"
+                required
+              />
+            </div>
+            
+            <div class="input-box">
+              <label for="cpf">CPF</label>
+              <input
+                id="cpf"
+                type="number"
+                name="cpf"
+                placeholder="Digite seu CPF"
+                required
+              />
+            </div>
+          
+            <div class="input-box">
+              <label for="sexo">SEXO</label>
+              <input
+                id="sexo"
+                type="text"
+                name="sexo"
+                placeholder="Digite o seu sexo"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="sexo">Data de Nascimento</label>
+              <input
+                id="birthdate"
+                type="date"
+                name="birthdate"
+                placeholder="Data de Nascimento"
+                required
+              />
+            </div>
+            <div class="input-box">
+              <label for="email">E-mail</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Digite seu e-mail"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="number">Celular</label>
+              <input
+                id="number"
+                type="tel"
+                name="number"
+                placeholder="(xx) xxxx-xxxx"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="password">Senha</label>
+              <input
+                id="password"
+                type="password"
+                name="password"
+                placeholder="Digite sua senha"
+                required
+              />
+            </div>
+
+            <div class="input-box">
+              <label for="confirmPassword">Confirme sua Senha</label>
+              <input
+                id="confirmPassword"
+                type="password"
+                name="confirmPassword"
+                placeholder="Digite a senha novamente"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="continue-button">
+            <input type="submit" value="Register">
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+/*
+menu
+*/
+
+ul {
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+nav {
+  background-color: #929f47;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+h1,
+a {
+  color: #fef5da;
+  text-decoration-line: none;
+  font-family: "Hepta Slab", Helvetica, Arial;
+}
+
+nav,
+ul {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+}
+
+li {
+  padding: 0 20px;
+  color: #fef5da;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px;
+  background-color: #929f47;
+}
+
+.modalsInfo__qtdNew {
+  position: static;
+  display: block;
+  max-width: 30px;
+  margin: 2px;
+}
+
+li:hover,
+h1:hover,
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: #f1c40f;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+button:focus ~ ul {
+  height: 260px;
+}
+
+/*
+login
+*/
+body {
+  width: 100%;
+  height: 105vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  border: dashed 3px #f1c40f;
+  border-radius: 20px;
+  box-shadow: 0px 2px 3px #555;
+}
+
+.form-image {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a6b4559c;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.form-image img {
+  width: 20rem;
+}
+
+.form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 3rem;
+}
+
+.form-header {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.login-button button {
+  border: none;
+  background-color: #008000;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button button:hover {
+  background-color: #f1c40f;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+}
+
+.input-box input {
+  margin: 0.6rem 0;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px #0000001c;
+  font-size: 0.8rem;
+}
+
+.input-box input:hover {
+  background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+  outline: 1px solid #008000;
+}
+
+.input-box label,
+.card-title h6 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #000000c0;
+}
+
+.input-box input::placeholder {
+  color: #000000be;
+}
+
+.card-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.62rem;
+  padding: 0 0.5rem;
+}
+
+.card-input {
+  display: flex;
+  align-items: center;
+}
+
+.card-input input {
+  margin-right: 0.35rem;
+}
+
+.card-input label {
+  font-size: 0.81rem;
+  font-weight: 600;
+  color: #000000c0;
+}
+
+.continue-button button {
+  width: 90%;
+  margin-top: 1rem;
+  border: none;
+  background-color: #008000;
+  padding: 0.62rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.continue-button button:hover {
+  background-color: #f1c40f;
+}
+
+.continue-button button a {
+  text-decoration: none;
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: #fff;
+}

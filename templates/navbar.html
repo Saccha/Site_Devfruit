@@ -1,0 +1,16 @@
+<nav>
+    <div class="logo header-fixed">
+        <h1>DevFruit<i class="fa-solid fa-watermelon-slice"></i></h1>
+    </div>
+  
+   
+    <ul>
+        
+        <li><a href="sobre.html">Sobre</a>&nbsp;<i class="fa-solid fa-carrot"></i></li>
+        <li><a href="index.html">Carrinho</a>&nbsp;<i class="fa-solid fa-basket-shopping"></i></li>
+        <span id="cartCounter"></span>
+        <li><a href="{{ url_for('login') }}">Login</a>&nbsp;<i class="fa-solid fa-address-card"></i></li>
+        <li><a href="atendimento.html">Atendimento</a>&nbsp;<i class="fa-solid fa-circle-info"></i></li>
+        <li><a href="{{ url_for('logout') }}">Sair</a>&nbsp;<i class="fa-solid fa-circle-xmark"></i></li>
+    </ul>
+</nav>

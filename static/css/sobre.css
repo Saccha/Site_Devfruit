@@ -1,0 +1,407 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.documentWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+/*
+menu
+*/
+.menuLinksContainer {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+
+  list-style: none;
+  padding: 0;
+  overflow-x: hidden;
+  transition: all 0.5s;
+  padding-right: 16px;
+}
+
+nav {
+  background-color: #929f47;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999px;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+}
+h1,
+a {
+  color: #fef5da;
+  text-decoration-line: none;
+  font-family: "Hepta Slab", Helvetica, Arial;
+}
+
+nav,
+ul {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+}
+
+li {
+  padding: 0 20px;
+  color: #fef5da;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px;
+}
+
+.modalsInfo__qtdNew {
+  position: static;
+  display: block;
+  max-width: 30px;
+  margin: 2px;
+}
+
+li:hover,
+h1:hover,
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: rgba(146, 224, 127, 0.2);
+}
+
+button:focus ~ ul {
+  height: 260px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+/* Conteúdo */
+.contentContainer {
+  display: flex;
+}
+
+/*carrosel*/
+.carrosel {
+  height: 400px;
+  width: 100vw;
+  border-radius: 10px;
+  margin-top: 24px;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%); */
+}
+
+.navigation {
+  position: absolute;
+  left: 550px;
+  bottom: 20px;
+
+  display: flex;
+  width: 100vw;
+}
+
+.bar {
+  width: 70px;
+  height: 17px;
+  border: 2px solid #fff;
+  margin: 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.bar:hover {
+  background-color: #fff;
+}
+
+input {
+  display: none;
+}
+
+.slides {
+  display: flex;
+  position: relative;
+  width: 500%;
+  height: 100%;
+}
+
+.slide {
+  width: 25%;
+  transition: 0.6s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+#slide1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+#slide2:checked ~ .s1 {
+  margin-left: -25%;
+}
+
+#slide3:checked ~ .s1 {
+  margin-left: -50%;
+}
+
+#slide4:checked ~ .s1 {
+  margin-left: -75%;
+}
+
+/*
+rodapé
+*/
+
+.footerContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background: #ebebeb;
+}
+
+.main-content {
+  display: flex;
+}
+.main-content .box {
+  flex-basis: 50%;
+  padding: 5px 10px;
+}
+.box h2 {
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #929f47;
+}
+.box .content {
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.box .content:after {
+  position: absolute;
+  content: "";
+  width: 15%;
+  height: 2px;
+  background: #f12020;
+  top: -10px;
+}
+.box .content:before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #929f47;
+  top: -10px;
+}
+.left .content .social {
+  margin: 15px 0 0 0;
+}
+.left .content .social a {
+  padding: 0 2px;
+}
+.left .content .social a span {
+  width: 30px;
+  height: 30px;
+  background: #929f47;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.left .content .social a span:hover {
+  background: #f12020;
+}
+.left .content p {
+  text-align: justify;
+  color: #929f47;
+}
+.center .content .fas {
+  font-size: 15px;
+  background: #929f47;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.center .content .fas:hover {
+  background: #f12020;
+}
+.center .content .text {
+  font-size: 17px;
+  font-weight: 500;
+  padding-left: 10px;
+  color: #929f47;
+}
+.center .content .phone {
+  margin: 10px 0;
+}
+.center .content .msg {
+  margin-top: 10px;
+}
+.right form input,
+.right form textarea {
+  width: 100%;
+  font-size: 15px;
+  background: #d5d5d5;
+  padding-left: 10px;
+  border: 1px solid #929f47;
+}
+.right form input {
+  height: 35px;
+}
+.right form input:focus,
+.right form textarea:focus {
+  outline-color: #bdf5b2;
+}
+.right form .text {
+  font-size: 17px;
+  margin-bottom: 2px;
+  color: #929f47;
+}
+.right form .btn {
+  margin-top: 10px;
+}
+.right form .btn button {
+  height: 40px;
+  width: 100%;
+  background: #929f47;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.right form .btn button:hover {
+  background: #f1c40f;
+}
+.bottom .center {
+  padding: 5px;
+  font-size: 15px;
+  background: #929f47;
+  text-align: center;
+}
+.bottom .center span {
+  color: #656565;
+}
+.bottom .center a {
+  color: #f12020;
+  text-decoration: none;
+}
+.bottom .center a:hover {
+  text-decoration: underline;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.left .content .social a span:hover {
+  background: #f12020;
+}
+.left .content p {
+  text-align: justify;
+  color: #929f47;
+}
+.center .content .fas {
+  font-size: 15px;
+  background: #929f47;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.center .content .fas:hover {
+  background: #f12020;
+}
+.center .content .text {
+  font-size: 17px;
+  font-weight: 500;
+  padding-left: 10px;
+  color: #929f47;
+}
+.center .content .phone {
+  margin: 10px 0;
+}
+.center .content .msg {
+  margin-top: 10px;
+}
+.right form input,
+.right form textarea {
+  width: 100%;
+  font-size: 15px;
+  background: #d5d5d5;
+  padding-left: 10px;
+  border: 1px solid #929f47;
+}
+.right form input {
+  height: 35px;
+}
+.right form input:focus,
+.right form textarea:focus {
+  outline-color: #bdf5b2;
+}
+.right form .text {
+  font-size: 17px;
+  margin-bottom: 2px;
+  color: #929f47;
+}
+.right form .btn {
+  margin-top: 10px;
+}
+.right form .btn button {
+  height: 40px;
+  width: 100%;
+  background: #929f47;
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.right form .btn button:hover {
+  background: #f1c40f;
+}
+.bottom .center {
+  padding: 5px;
+  font-size: 15px;
+  background: #929f47;
+  text-align: center;
+}
+.bottom .center span {
+  color: #656565;
+}
+.bottom .center a {
+  color: #f12020;
+  text-decoration: none;
+}
+.bottom .center a:hover {
+  text-decoration: underline;
+}
